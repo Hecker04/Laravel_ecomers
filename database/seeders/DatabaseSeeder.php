@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\distributor;
 use App\Models\User;
 use App\Models\Admin;
 use App\Models\skripsi;
@@ -17,20 +18,20 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create(); // Commented out (factory method)
 
-       /*User::create([
-            'name' => 'user1',
-            'email' => 'user@gmail1.com', // Duplicate email for both User and Admin
-            'password' => bcrypt('123456789'),
-            'point' => 10000,
-        ]);
+        /*User::create([
+             'name' => 'user1',
+             'email' => 'user@gmail1.com', // Duplicate email for both User and Admin
+             'password' => bcrypt('123456789'),
+             'point' => 10000,
+         ]);
 
-        Admin::create([
-            'name' => 'admin',
-            'username' => "Admin", // Typos: 'usename' should be 'username'
-            'email' => 'admin@gmail.com', // Duplicate email for both User and Admin
-            'password' => bcrypt('123456789'),
-        ]);*/
-        skripsi::create([
+         Admin::create([
+             'name' => 'admin',
+             'username' => "Admin", // Typos: 'usename' should be 'username'
+             'email' => 'admin@gmail.com', // Duplicate email for both User and Admin
+             'password' => bcrypt('123456789'),
+         ]);*/
+        /*skripsi::create([
             'judul' => 'laporan',
             'nama' => "yusri", // Typos: 'usename' should be 'username'
             'nim' => '6304221497',
@@ -38,6 +39,15 @@ class DatabaseSeeder extends Seeder
             'dosen pembimbing 1' => 'lidya wati mkom',
             'dosen pembimbing 2' => 'supria mkom',// Duplicate email for both User and Admin
             
+        ]);*/
+        distributor::create([
+            'name' => 'bg jali',
+            'kota' => "binjai", // Typos: 'usename' should be 'username'
+            'provinsi' => 'riau',
+            'kontak' => '083150758434',
+            'email' => 'jali@gmail.com',
+            // Duplicate email for both User and Admin
+
         ]);
     }
 }

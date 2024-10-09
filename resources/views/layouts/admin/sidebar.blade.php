@@ -22,6 +22,12 @@
                     <span>Produk</span>
                 </a>
             </li>
+            <li class="{{ Route::is('admin.distributor') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.distributor') }}">
+                    <i class="fas fa-box"></i>
+                    <span>Distributor</span>
+                </a>
+            </li>
         </ul>
     </aside>
 </div>
