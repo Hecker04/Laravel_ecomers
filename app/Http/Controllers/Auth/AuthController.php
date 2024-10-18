@@ -76,6 +76,9 @@ class AuthController extends Controller
 
         if ($user) {
             Alert::success('Berhasil', 'Akun baru berhasil dibuat, silakan melakukan login');
+            return redirect('/');
+        } else {
+            Alert::error('gagal');
             return redirect()->back();
         }
     }

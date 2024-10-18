@@ -7,11 +7,13 @@
             <h1>Edit Produk</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="{{ route('admin.dashboard') }}">Dashboard</a></div>
-                <div class=”breadcrumb-item active”><a href="{{ route('admin.product') }}">Produk</a></div>
-                <div class=”breadcrumb-item”>Edit Produk</div>
+                <div class="breadcrumb-item active"><a href="{{ route('admin.product') }}">Produk</a></div>
+                <div class="breadcrumb-item">Edit Produk</div>
             </div>
         </div>
-        <a href=" {{ route('admin.product') }}" class="btn btn-icon icon-left btn-warning">Kembali</a>
+        <a href="{{ route('admin.product') }}" class="btn btn-warning">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
 
         <div class="card mt-4">
             <form action="{{ route('product.update', $product->id) }}" class="needs-validation" novalidate=""
@@ -52,7 +54,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label for="description">Deskripsi Produk</label>
-                                <textarea class="form-control" name="description" id="description" cols="30" rows="40"
+                                <textarea class="form-control" name="description" id="description" cols="30" rows="10"
                                     required="">{{ $product->description }}</textarea>
                                 <div class="invalid-feedback">
                                     Isi berita harus di isi!
@@ -64,6 +66,7 @@
                                 <div class="custom-file">
                                     <input class="custom-file-input" name="image" id="customFile" type="file">
                                     <label class="custom-file-label" for="customFile">Pilih Gambar</label>
+
                                 </div>
                             </div>
                         </div>

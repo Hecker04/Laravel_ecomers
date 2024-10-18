@@ -13,8 +13,9 @@
                 <div class="breadcrumb-item">Tambah Produk</div>
             </div>
         </div>
-        <a href="{{ route('admin.product') }}" class="btn btn-icon icon-left btn-
-warning"> Kembali</a>
+        <a href="{{ route('admin.product') }}" class="btn btn-warning">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
         <div class="card mt-4">
             <form action="{{ route('product.store') }}" class="needs-validation" novalidate=""
                 enctype="multipart/form-data" method="POST">

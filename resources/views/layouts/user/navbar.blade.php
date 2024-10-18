@@ -2,7 +2,7 @@
     <div class="main_menu">
         <div class="container">
             <!-- Navbar Starts -->
-            <nav class="navbar navbar-expand-lg">
+            <nav class="fixed-top navbar navbar-expand-lg">
                 <!-- Logo -->
                 <a class="navbar-brand logo_h" href="index.html">
                     <img src="{{ asset('assets/templates/user/img/logo.png')}}" alt="Logo">
@@ -32,29 +32,29 @@
     </div>
 </header>
 <style>
-.header_area {
-    background: #fff;
-    /* Background warna navbar */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Bayangan untuk efek kedalaman */
-}
+    .header_area {
+        background: #fff;
+        /* Background warna navbar */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* Bayangan untuk efek kedalaman */
+    }
 
-.navbar-nav .nav-link {
-    padding: 15px 20px;
-    /* Ruang dalam item nav */
-    color: #333;
-    /* Warna teks */
-    transition: color 0.3s;
-    /* Efek transisi */
-}
+    .navbar-nav .nav-link {
+        padding: 15px 20px;
+        /* Ruang dalam item nav */
+        color: #333;
+        /* Warna teks */
+        transition: color 0.3s;
+        /* Efek transisi */
+    }
 
-.navbar-nav .nav-link:hover {
-    color: #007bff;
-    /* Warna saat hover */
-}
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+        /* Warna saat hover */
+    }
 
-.navbar-brand img {
-    max-height: 50px;
-    /* Tinggi maksimal logo */
-}
+    .navbar-brand img {
+        max-height: 50px;
+        /* Tinggi maksimal logo */
+    }
 </style>

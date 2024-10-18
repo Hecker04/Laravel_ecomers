@@ -6,12 +6,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Flashsale;
 class UserController extends Controller
 {
     public function index()
     {
         $products = Product::all();
-        return view('pages.user.index', compact('products'));
+        $flashsales = FlashSale::all();
+        return view('pages.user.index', compact('products', 'flashsales'));
 
     }
     public function detail_product($id)

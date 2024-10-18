@@ -6,6 +6,8 @@ use App\Models\distributor;
 use App\Models\User;
 use App\Models\Admin;
 use App\Models\skripsi;
+
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents; // Commented out
 use Illuminate\Database\Seeder;
 
@@ -40,14 +42,17 @@ class DatabaseSeeder extends Seeder
             'dosen pembimbing 2' => 'supria mkom',// Duplicate email for both User and Admin
             
         ]);*/
-        distributor::create([
-            'name' => 'bg jali',
-            'kota' => "binjai", // Typos: 'usename' should be 'username'
-            'provinsi' => 'riau',
-            'kontak' => '083150758434',
-            'email' => 'jali@gmail.com',
-            // Duplicate email for both User and Admin
+        /* distributor::create([
+             'name' => 'bg jali',
+             'kota' => "binjai", // Typos: 'usename' should be 'username'
+             'provinsi' => 'riau',
+             'kontak' => '083150758434',
+             'email' => 'jali@gmail.com',
+             // Duplicate email for both User and Admin
 
-        ]);
+         ]);
+     }*/
+        // Create Flash Sale data
+
     }
 }
