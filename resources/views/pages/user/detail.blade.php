@@ -39,8 +39,8 @@ justify-content-end">
                         </ul>
                         <p>{{ $product->description }}</p>
                         <div class="card_area d-flex align-items-center">
-                            <a class="primary-btn" href="javascript:void(0);" onclick="confirmPurchase('{{ $product->id }}', '{{ Auth::user()->id
-}}')"> Beli
+                            <a class="primary-btn" href="javascript:void(0);"
+                                onclick="confirmPurchase('{{ $product->id }}', '{{ Auth::user()->id}}')"> Beli
                                 Produk</a>
                         </div>
                     </div>
@@ -52,22 +52,22 @@ justify-content-end">
 </section>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function confirmPurchase(productId, userId) {
-        Swal.fire({
-            title: 'Apakah Anda yakin?',
-            text: "Anda akan membeli produk ini!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ya, Beli!',
-            cancelButtonText: 'Batal'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = '/product/purchase/' + productId + '/' +
-                    userId;
-            }
-        });
-    }
+function confirmPurchase(productId, userId) {
+    Swal.fire({
+        title: 'Apakah Anda yakin?',
+        text: "Anda akan membeli produk ini!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Beli!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = '/product/purchase/' + productId + '/' +
+                userId;
+        }
+    });
+}
 </script>
 @endsection

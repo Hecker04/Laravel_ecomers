@@ -115,18 +115,25 @@ function confirmPurchase(productId, userId) {
                         <p class="card-text">Rp{{ number_format($flashSaleItem->discount_price, 2) }}</p>
                         <p class="card-text">Diskon: {{ round($flashSaleItem->discount_percentage) }}%</p>
                         <p class="card-text">Sisa waktu:
-                            {{ \Carbon\Carbon::parse($flashSaleItem->end_time)->diffForHumans() }}</p>
-                        <p class="card-text">Stok tersisa: {{ $flashSaleItem->stock }}</p>
-                        <button class="btn btn-primary">Beli Sekarang</button>
+                            {{ \Carbon\Carbon::parse($flashSaleItem->end_time)->diffForHumans() }}
+                        </p>
+                        <p class="card-text text-center">Stok tersisa: {{ $flashSaleItem->stock }}</p>
+                        <div class="card_area d-flex align-items-center justify-content-center">
+                            <a class="primary-btn" href="javascript:void(0);"
+                                onclick="confirmPurchase('{{ $item->id }}', '{{ Auth::user()->id }}')">Beli</a>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
-            @empty
-            <div class="col-lg-12">
-                <h3 class="text-center">Tidak ada produk flash sale saat ini.</h3>
-            </div>
-            @endforelse
         </div>
+        @empty
+        <div class="col-lg-12">
+            <h3 class="text-center">Tidak ada produk flash sale saat ini.</h3>
+        </div>
+        @endforelse
+    </div>
     </div>
 </section>
 <!-- end flash sale Area -->
